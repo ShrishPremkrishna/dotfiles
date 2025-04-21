@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+brew update
+brew bundle install --verbose --file=~/dotfiles/Brewfile
+brew bundle cleanup --force --verbose --file=~/dotfiles/Brewfile

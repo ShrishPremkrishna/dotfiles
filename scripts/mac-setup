@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+echo $SHELL
+
+eval "$SHELL --version"
+
+defaults write com.apple.Finder AppleShowAllFiles true
+
+# Install Homebrew 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+echo >> /Users/shrish/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/shrish/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+
+~/dotfiles/scripts/bbicf
+
+
